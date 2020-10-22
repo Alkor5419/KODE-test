@@ -1,3 +1,12 @@
+Задание 2.
+Декомпозиция:
+   1.Настройка маршрутизации в App.js (минут 5)
+   2.Создание 4-х страниц. Их подключение в App.js. (минут 7)
+   3.В экранах логина и ввода сообщения можно вынести окно заполнения как компоненту LoginWindow, а лэйблы и инпуты замапить. Вставить LoginWindow в Login.jsx, Message.jsx. (1 час)
+   4.Написать к ним стили, параллельно изучая styled-components.(30 минут)
+   5.Добавление кнопки submit.(15 мин)!!!
+   6.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
