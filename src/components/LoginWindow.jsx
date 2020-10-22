@@ -1,5 +1,6 @@
 import React from 'react';
 import css from 'styled-components';
+import Button from './Button';
 
 const Wrap = css.div`
    display: flex;
@@ -10,7 +11,7 @@ const Wrap = css.div`
    background-color:#333;
 `;
 const Window = css.div`
-   border: 2px solid #fff;
+   border: 2px solid #9f1aac;
    border-radius: 5px;
    width: 400px;
    height: 40vh;
@@ -26,6 +27,13 @@ const LoginInputs = css.input`
    width:100%;
    margin-bottom: 30px;
    `;
+const BtnWrap = css.div`
+   margin-top: 80px;
+   width: 100%;
+   display: flex;
+   align-items: center;  
+   justify-content: center;
+`;
 
 const LoginWindow = (props) => {
 const formItems = props.formItems.map(s => <div><LoginLabels >{s.label}</LoginLabels><LoginInputs type = {s.type}/></div>);
@@ -33,6 +41,9 @@ const formItems = props.formItems.map(s => <div><LoginLabels >{s.label}</LoginLa
       <Window>
          <form>
            {formItems}
+           <BtnWrap>
+            <Button />
+           </BtnWrap>
          </form>
       </Window>
    </Wrap>
