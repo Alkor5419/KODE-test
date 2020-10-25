@@ -1,7 +1,6 @@
-import React from 'react'
 import css from 'styled-components';
 
-const Btn = css.button`
+export const Btn = css.button`
    width: 170px;
    height: 50px;
    background-color: #444141;
@@ -16,9 +15,3 @@ const Btn = css.button`
       color:#9f1aac;
    }
 `;
-
-const Button = props => {
-   return <Btn type = 'submit'>Submit</Btn>
-}
-
-export default Button;

@@ -1,10 +1,31 @@
 import React from 'react'
-import LoginWindow from '../LoginWindow';
+import { useState } from 'react';
+import { BtnWrap, LoginInputs, LoginLabels, Window, Wrap } from '../LoginWindow';
+import {Btn} from '../Button';
+import { Redirect } from 'react-router-dom';
 
 const Message = props => {
-   const initialState = [{label:'Login',type:'text'}];
+   const [message, setMessage] = useState(null);
+   const [messageValue, setMessageValue] = useState('');
+
+   const submit = (e) => {
+      e.preventDefault();
+      setMessage(messageValue);
+   }
+   if (message === '0000') return <Redirect to = '/main' />;
+   return <Wrap>
+   <Window>
+      <form onSubmit = {submit} >
+      <LoginLabels >Code from SMS</LoginLabels>
+      <LoginInputs type = 'text' value = {messageValue} onChange = {e => setMessageValue(e.target.value)}/>
+      
    
-   return <LoginWindow formItems = {initialState}/>
+        <BtnWrap>
+        <Btn type = 'submit'>Submit</Btn>
+        </BtnWrap>
+      </form>
+   </Window>
+</Wrap>   
 }
 
 export default Message;
