@@ -3,7 +3,7 @@ import * as axios from 'axios';
 import styled from 'styled-components';
 import Cards from './Cards';
 import Filters from './Filters';
-import Header from './Header';
+import Header from '../Header';
 
 const Wrap = styled.div`
    position: absolute;
@@ -20,12 +20,14 @@ const MainContainer = styled.div`
 
 const Main = props => {
    const [pokemons, setPokemons] = useState(null);
-  
+   const path = props.location.pathname;
+
    useEffect(() => {
       axios.get('https://api.pokemontcg.io/v1/cards')
       .then(response => {
          setPokemons(response.data.cards);
-         props.setData(pokemons);
+         
+         
          console.log(response.data);
          console.log('Pokemons ',pokemons )
       })
@@ -33,10 +35,10 @@ const Main = props => {
    }, [])
    console.log('Pokemons ',pokemons )
    return <Wrap>
-      <Header />
+      <Header path = {path}/>
       <MainContainer>
          <Filters />
-         <Cards pokemons = {pokemons}/>
+         <Cards pokemons = {pokemons} />
       </MainContainer>
    </Wrap>
 }

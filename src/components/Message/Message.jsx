@@ -12,7 +12,7 @@ const Message = props => {
       e.preventDefault();
       setMessage(messageValue);
    }
-   if (message === '0000') return <Redirect to = '/main' />;
+   if (message === '123456') return <Redirect to = '/main' />;
    return <Wrap>
    <Window>
       <form onSubmit = {submit} >

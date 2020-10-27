@@ -18,6 +18,7 @@ const submit = (e) => {
    setPassword(passwordValue);
    if ((login === 'kode@kode.ru') && (password === 'Enk0deng')) {
       setValidate(true);
+      localStorage.setItem('Login', login);
    }
    else {
       setValidate('Error')
