@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import '../link.css';
 
 const HeaderWrap = styled.div`
 margin: 20px 5em;
@@ -12,10 +13,12 @@ align-items: center;
 padding: 0 2em;
 `;
 const Header = props => {
-        
+        const unSubscribe = () =>{
+                delete localStorage.login;
+        }
         return <HeaderWrap>
-                {(props.path !== '/main')? <Link to = '/main'>Back</Link>: null}
-                <Link to = '/'>Logout</Link></HeaderWrap>
+                {(props.path !== '/main')? <Link className='link' to = '/main'>Back</Link>: null}
+                <Link className='link' to = '/' onClick = {unSubscribe}>Logout</Link></HeaderWrap>
 }
 
 export default Header;

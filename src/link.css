@@ -1,0 +1,8 @@
+.link{
+   text-decoration: none;
+   list-style: none;
+   color: aqua;
+}
+.link:hover{
+   color:rgb(142, 22, 197);
+}

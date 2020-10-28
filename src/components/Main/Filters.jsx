@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const FiltersWrap = styled.div`
@@ -10,9 +11,17 @@ margin-left: 5em;
 const Type = styled.select`
 margin:120px;
 `;
-const Filters = () => {
+const Filters = (props) => {
+        const [currentType, setCurrentType] = useState("type");
+        const [currentSubtype, setCurrentSubtype] = useState("subtype");
+        const changeType = (value) => {
+                setCurrentType(value);
+        }
+        const changeSubtype = (value) => {
+                setCurrentSubtype(value);
+        }
         return <FiltersWrap>
-                <Type>
+                <Type value = {currentType} onChange = {e => changeType(e.target.value)} >
                         <option value="type">Type</option>
                         <option value="colorless">Colorless</option>
                         <option value="darkness">Darkness</option>
@@ -26,7 +35,7 @@ const Filters = () => {
                         <option value="psychic">Psychic</option>
                         <option value="water">Water</option>
                 </Type>
-                <select>
+                <select value = {currentSubtype} onChange = {e => changeSubtype(e.target.value)}>
                         <option value="subtype">Subtype</option>
                         <option value="ex">EX</option>
                         <option value="special">Special</option>

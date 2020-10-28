@@ -13,6 +13,7 @@ const Message = props => {
       setMessage(messageValue);
    }
    if (message === '123456') return <Redirect to = '/main' />;
+   
    return <Wrap>
    <Window>
       <form onSubmit = {submit} >

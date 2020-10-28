@@ -6,8 +6,8 @@ import {Btn} from '../Button';
 import {Error} from '../ErrorMessage'
 
 const Login = (props) => {
-  const [login, setLogin] = useState(null);
-const [password, setPassword] = useState(null);
+  const [login, setLogin] = useState('');
+const [password, setPassword] = useState('');
 const [loginValue, setLoginValue] = useState('');
 const [passwordValue, setPasswordValue] = useState('');
 const [validate, setValidate] = useState(false);
@@ -16,15 +16,15 @@ const submit = (e) => {
    e.preventDefault();
    setLogin(loginValue);
    setPassword(passwordValue);
-   if ((login === 'kode@kode.ru') && (password === 'Enk0deng')) {
-      setValidate(true);
-      localStorage.setItem('Login', login);
-   }
-   else {
+   if ((login !== 'kode@kode.ru') || (password !== 'Enk0deng')) {
+      
       setValidate('Error')
    }
 }
-if (validate === true) return <Redirect to = '/message'/>;
+if ((login === 'kode@kode.ru') && (password === 'Enk0deng')){
+   localStorage.setItem('login', login);
+   return <Redirect to = '/message'/>;
+} 
    
    
    

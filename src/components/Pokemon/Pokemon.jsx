@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import * as axios from 'axios';
 import styled from 'styled-components';
 import Header from '../Header';
+import { Redirect } from 'react-router-dom';
 
 const Wrap = styled.div`
    position: absolute;
@@ -44,6 +45,9 @@ const Pokemon = props => {
       })
       .catch(err => console.log(err))
    }, [])
+
+   if (!localStorage.login) return <Redirect to = '/' />;
+
    return <Wrap>
       <Header path = {path}/>
       
