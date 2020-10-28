@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter >
     <Switch>
     
-      <Route exact path = '/' component = {Login} />
+      <Route exact path = '/KODE-test/' component = {Login} />
       <Route path = '/message' component = {Message} />
       <Route path = '/main'  component = {Main} />
       <Route path = '/pokemon' component = {Pokemon} />
