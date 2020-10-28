@@ -12,9 +12,9 @@ function App() {
     <Switch>
     
       <Route exact path = '/KODE-test/' component = {Login} />
-      <Route path = '/message' component = {Message} />
-      <Route path = '/main'  component = {Main} />
-      <Route path = '/pokemon' component = {Pokemon} />
+      <Route path = '/KODE-test/message' component = {Message} />
+      <Route path = '/KODE-test/main'  component = {Main} />
+      <Route path = '/KODE-test/pokemon' component = {Pokemon} />
     
     </Switch>
     </BrowserRouter>
