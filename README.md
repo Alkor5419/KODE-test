@@ -16,7 +16,7 @@
    13.Добавляю юзера в localStorage. Словил баг, сабмит формы срабатывает только после 2-го клика. (20 минут)
    14.Сделать редирект, если не обнаружен юзер в localStorage. Удаляю ключ Login из localStorage при нажатии Logout. (15 минут)
    15.Сделать запрос при выборе селекта. Не понял на какой url делать запрос.
-   16.Чтобы как-то стилизовать Link завел link.css ;(30 мин)
+   16.Чтобы как-то стилизовать Link завел link.css (30 мин)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
