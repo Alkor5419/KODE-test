@@ -3,6 +3,7 @@ import * as axios from 'axios';
 import styled from 'styled-components';
 import Header from '../Header';
 import { Redirect } from 'react-router-dom';
+import {loginPath} from '../constatns';
 
 const Wrap = styled.div`
    position: absolute;
@@ -38,7 +39,7 @@ const Pokemon = props => {
    const id = path.split('/');
 
    useEffect(() => {
-      axios.get(`https://api.pokemontcg.io/v1/cards/${id[2]}`)
+      axios.get(`https://api.pokemontcg.io/v1/cards/${id[3]}`)
       .then(response => {
          console.log(response.data);
          setPokemon(response.data.card);
@@ -46,7 +47,7 @@ const Pokemon = props => {
       .catch(err => console.log(err))
    }, [])
 
-   if (!localStorage.login) return <Redirect to = '/' />;
+   if (!localStorage.login) return <Redirect to = {loginPath} />;
 
    return <Wrap>
       <Header path = {path}/>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { BtnWrap, LoginInputs, LoginLabels, Window, Wrap } from '../LoginWindow';
 import {Btn} from '../Button';
 import { Redirect } from 'react-router-dom';
+import {mainPath} from '../constatns';
 
 const Message = props => {
    const [message, setMessage] = useState(null);
@@ -12,7 +13,7 @@ const Message = props => {
       e.preventDefault();
       setMessage(messageValue);
    }
-   if (message === '123456') return <Redirect to = '/main' />;
+   if (message === '123456') return <Redirect to = {mainPath} />;
    
    return <Wrap>
    <Window>

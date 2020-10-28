@@ -17,6 +17,8 @@
    14.Сделать редирект, если не обнаружен юзер в localStorage. Удаляю ключ Login из localStorage при нажатии Logout. (15 минут)
    15.Сделать запрос при выборе селекта. Не понял на какой url делать запрос.
    16.Чтобы как-то стилизовать Link завел link.css (30 мин)
+   17.Залил в github pages (30 мин)
+   18.В github pages сбились роуты. Поменял роуты (30 мин)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

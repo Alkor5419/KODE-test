@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import '../../link.css';
+import {pokemonPath} from '../constatns';
+
 const CardsWrap = styled.div`
         display:flex;
         flex-wrap:wrap;
@@ -24,7 +26,7 @@ const Card = ({img, name, artist, id}) =>{
         
         return <CardWrap>
                 <CardImage><img src = {img} alt = {name}/></CardImage>
-                <CardName><Link className = 'link' to ={`/pokemon/${id}`} >{name}</Link></CardName>
+                <CardName><Link className = 'link' to ={`${pokemonPath}/${id}`} >{name}</Link></CardName>
                 <CardArtist >{artist}</CardArtist>
         </CardWrap>
 }

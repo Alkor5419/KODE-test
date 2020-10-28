@@ -5,6 +5,7 @@ import Cards from './Cards';
 import Filters from './Filters';
 import Header from '../Header';
 import { Redirect } from 'react-router-dom';
+import {loginPath} from '../constatns';
 
 const Wrap = styled.div`
    position: absolute;
@@ -35,7 +36,7 @@ const Main = props => {
       .catch(err => console.log(err))
    }, [])
    console.log('Pokemons ',pokemons )
-   if (!localStorage.login) return <Redirect to = '/' />;
+   if (!localStorage.login) return <Redirect to = {loginPath} />;
 
    return <Wrap>
       <Header path = {path}/>

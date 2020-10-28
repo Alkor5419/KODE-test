@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { BtnWrap, LoginInputs, LoginLabels, Window, Wrap } from '../LoginWindow';
 import {Btn} from '../Button';
-import {Error} from '../ErrorMessage'
+import {Error} from '../ErrorMessage';
+import {messagePath} from '../constatns';
 
 const Login = (props) => {
   const [login, setLogin] = useState('');
@@ -23,7 +24,7 @@ const submit = (e) => {
 }
 if ((login === 'kode@kode.ru') && (password === 'Enk0deng')){
    localStorage.setItem('login', login);
-   return <Redirect to = '/message'/>;
+   return <Redirect to = {messagePath}/>;
 } 
    
    
