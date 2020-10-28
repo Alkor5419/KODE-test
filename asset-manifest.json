@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/KODE-test/static/css/main.5c6a677d.chunk.css",
-    "main.js": "/KODE-test/static/js/main.a172209b.chunk.js",
-    "main.js.map": "/KODE-test/static/js/main.a172209b.chunk.js.map",
+    "main.js": "/KODE-test/static/js/main.c3c6fab7.chunk.js",
+    "main.js.map": "/KODE-test/static/js/main.c3c6fab7.chunk.js.map",
     "runtime-main.js": "/KODE-test/static/js/runtime-main.b8fef612.js",
     "runtime-main.js.map": "/KODE-test/static/js/runtime-main.b8fef612.js.map",
     "static/js/2.3eebfdbe.chunk.js": "/KODE-test/static/js/2.3eebfdbe.chunk.js",
     "static/js/2.3eebfdbe.chunk.js.map": "/KODE-test/static/js/2.3eebfdbe.chunk.js.map",
     "index.html": "/KODE-test/index.html",
-    "precache-manifest.c39e668a83b3600b093d279eff564559.js": "/KODE-test/precache-manifest.c39e668a83b3600b093d279eff564559.js",
+    "precache-manifest.feddd3bc68cf44d797e3e89d32495fcf.js": "/KODE-test/precache-manifest.feddd3bc68cf44d797e3e89d32495fcf.js",
     "service-worker.js": "/KODE-test/service-worker.js",
     "static/css/main.5c6a677d.chunk.css.map": "/KODE-test/static/css/main.5c6a677d.chunk.css.map",
     "static/js/2.3eebfdbe.chunk.js.LICENSE.txt": "/KODE-test/static/js/2.3eebfdbe.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b8fef612.js",
     "static/js/2.3eebfdbe.chunk.js",
     "static/css/main.5c6a677d.chunk.css",
-    "static/js/main.a172209b.chunk.js"
+    "static/js/main.c3c6fab7.chunk.js"
   ]
 }
